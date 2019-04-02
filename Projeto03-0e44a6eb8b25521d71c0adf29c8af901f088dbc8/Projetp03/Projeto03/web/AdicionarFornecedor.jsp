@@ -1,7 +1,7 @@
 <%-- 
-    Document   : AdicionarCliente
-    Created on : 02/04/2019, 17:08:18
-    Author     : davil
+    Document   : AdicionarFornecedor
+    Created on : 02/04/2019, 19:10:00
+    Author     : Fatec
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -12,20 +12,19 @@
         <title>Adicionar - Contato</title>
     </head>
     <body>
-        <h1>Clientes</h1>
+        <h1>Fornecedor</h1>
         <h2>Adicionar</h2>
-        <form action="ListagemClientes.jsp">
+        <form action="ListagemFornecedor.jsp">
             NOME:</br><input type="text" name="nome" /></br>
-            CPF:</br><input type="text" name="cpf" /></br>
-            RG:</br><input type="text" name="rg" /></br>
+            CNPJ:</br><input type="text" name="cnpj" /></br>
+            RAZÃO SOCIAL:</br><input type="text" name="razaosocial" /></br>
             TELEFONE:</br><input type="text" name="telefone" /></br>
             EMAIL:</br><input type="text" name="email" /></br>
             ENDEREÇO:</br><input type="text" name="endereco" /></br>
             <hr/>
-            <h2>Deseja incluir o novo cliente?</h2>
-            <input type="submit" name="AdicionarCliente" value="Sim" />
-            <input type="submit" name="AdicionarCliente" value="Não" />
+            <h2>Deseja incluir o novo fornecedor?</h2>
+            <input type="submit" name="AdicionarFornecedor" value="Sim" />
+            <input type="submit" name="AdicionarFornecedor" value="Não" />
         </form>
     </body>
 </html>
-

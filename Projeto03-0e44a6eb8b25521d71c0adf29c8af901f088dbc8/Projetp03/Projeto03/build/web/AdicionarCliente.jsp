@@ -14,7 +14,7 @@
     <body>
         <h1>Clientes</h1>
         <h2>Adicionar</h2>
-        <form action="index.jsp">
+        <form action="ListagemClientes.jsp">
             NOME:</br><input type="text" name="nome" /></br>
             CPF:</br><input type="text" name="cpf" /></br>
             RG:</br><input type="text" name="rg" /></br>

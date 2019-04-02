@@ -5,7 +5,6 @@
 --%>
 <%@page import="br.com.fatecpg.cadastros.BancoDados"%>
 <%@page import="br.com.fatecpg.cadastros.Cliente"%>
-<%@page import="br.com.fatecpg.cadastros.Fornecedor"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -44,40 +43,7 @@
     }
     response.sendRedirect(request.getRequestURI());
   }
-  if(request.getParameter("AdicionarFornecedor")!=null){
-    if(request.getParameter("AdicionarFornecedor").equals("Sim")){
-      Cliente c = new Cliente();
-      c.setNome(request.getParameter("nome"));
-      c.setCnpj(request.getParameter("cnpj"));
-      c.setRazaosocial(request.getParameter("razaosocial"));
-      c.setTelefone(request.getParameter("telefone"));
-      c.setEmail(request.getParameter("email"));
-      c.setEndereco(request.getParameter("endereco"));
-      BancoDados.getDados().add(c);
-    }
-    response.sendRedirect(request.getRequestURI());
-  }
-  if(request.getParameter("AlterarFornecedor")!=null){
-    if(request.getParameter("AlterarFornecedor").equals("Sim")){
-      int index = Integer.parseInt(request.getParameter("index"));
-      Cliente c = new Cliente();
-      c.setNome(request.getParameter("nome"));
-      c.setCnpj(request.getParameter("cnpj"));
-      c.setRazaosocial(request.getParameter("razaosocial"));
-      c.setTelefone(request.getParameter("telefone"));
-      c.setEmail(request.getParameter("email"));
-      c.setEndereco(request.getParameter("endereco"));
-      BancoDados.getDados().set(index, c);
-    }
-    response.sendRedirect(request.getRequestURI());
-  }
-  if(request.getParameter("ExcluirFornecedor")!=null){
-    if(request.getParameter("ExcluirFornecedor").equals("Sim")){
-      int index = Integer.parseInt(request.getParameter("index"));
-      BancoDados.getDados().remove(index);
-    }
-    response.sendRedirect(request.getRequestURI());
-  }
+
 %>
 
 <html>
@@ -86,10 +52,11 @@
         <title>Listas de Clientes e Fornecedores</title>
     </head>
     <body>
-        <h1>Contatos</h1>
-        <h2><a href="AdicionarCliente.jsp">Adicionar Cliente</a></h2>
-        <h2><a href="AdicionarFornecedor.jsp">Adicionar Fornecedor</a></h2>
-        <h2>Lista</h2>
+        
+        
+        <h2><a href="ListagemFornecedor.jsp"> Ver Fornecedores</a></h2>
+        <h2>Lista Clientes</h2>
+        <h2><a href="AdicionarCliente.jsp" >Adicionar Cliente</a></h2>
         <table borde="1">
             <tr>
                 <th>Índice</th>
@@ -118,5 +85,7 @@
                 </tr>
             <%}%>
         </table>
+        
+        <h2><a href="index.jsp" >Home</a></h2>
     </body>
 </html>

@@ -62,6 +62,6 @@ public class Cliente {
     }
 
     public void setEndereco(String endereço) {
-        this.endereco = endereço;
+        this.endereco = endereco;
     }       
 }
